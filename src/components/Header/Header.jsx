@@ -4,15 +4,15 @@ import Button from '../Button/Button';
 
 function Header() {
   const { user, onClose } = useTelegram();
-  const tg = window.Telegram.WebApp
+  const { first_name, last_name, username } = window.Telegram.WebApp.initDataUnsafe.user
   
 
   return (
     <div className='header'>
       <Button onClick={onClose}>Close</Button>
-      <span className='userName'>{user?.username}</span>
-      <p>1{tg.initDataUnsafe?.user?.username}</p>
-      <p>2{tg.initDataUnsafe?.user?.username}</p>
+      <span className='userName'>{username}</span>
+      <p>1{first_name}</p>
+      <p>2{last_name}</p>
     </div>
   );
 }
