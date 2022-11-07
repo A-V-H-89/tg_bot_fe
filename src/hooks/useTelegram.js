@@ -13,6 +13,8 @@ export function useTelegram() {
     }
   };
 
+  console.log(tg.initDataUnsafe, 123)
+
   return {
     tg,
     user: tg.initDataUnsafe?.user,
